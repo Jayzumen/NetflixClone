@@ -51,12 +51,6 @@ function Header() {
         <BellIcon className='h-6 w-6 cursor-pointer' />
 
         <AccountMenu />
-
-        {/* <button
-          onClick={logout}
-          className='rounded bg-[#e50914] py-2 font-semibold w-20 transition duration-300 hover:text-black'>
-          Log Out
-        </button> */}
       </div>
     </header>
   );

@@ -46,7 +46,8 @@ const Home = ({
       }`}>
       <Head>
         <title>
-          {movie?.title || movie?.original_name || "Home"} - Netflix
+          {movie?.title || movie?.original_name || "Home"} -
+          Netflix-Clone
         </title>
         <link rel='icon' href='/favicon.ico' />
       </Head>

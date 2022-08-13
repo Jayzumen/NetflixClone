@@ -36,7 +36,7 @@ function Banner({ netflixOriginals }: Props) {
         />
       </div>
 
-      <div className='pt-32 md:pt-36 lg:pt-52 xl:pt-68'>
+      <div className='pt-32 md:pt-36 lg:pt-48 xl:pt-68'>
         <div className='md:min-h-[250px] pt-12 md:pt-20 lg:pt-16'>
           <h1 className='text-2xl lg:text-7xl md:text-4xl font-bold pb-2'>
             {movie?.title || movie?.name || movie?.original_name}

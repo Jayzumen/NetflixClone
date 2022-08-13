@@ -2,14 +2,14 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@heroicons/react/outline";
+import { DocumentData } from "firebase/firestore";
 import { useRef, useState } from "react";
 import { Movie } from "../typings";
 import Thumbnail from "./Thumbnail";
 
 interface Props {
   title: string;
-  //   movies: Movie[] | DocumentData[]
-  movies: Movie[];
+  movies: Movie[] | DocumentData[];
 }
 
 function Row({ title, movies }: Props) {
@@ -27,7 +27,7 @@ function Row({ title, movies }: Props) {
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
 
-      rowRef.current.scrollTo({ left: scrollTo, behavior: "auto" });
+      rowRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
     }
   };
 
@@ -51,10 +51,7 @@ function Row({ title, movies }: Props) {
           className='flex items-center space-x-0.5 overflow-x-scroll md:space-x-2.5
            md:p-2 scrollbar-hide '>
           {movies.map((movie) => (
-            <Thumbnail
-              key={movie.title || movie.name}
-              movie={movie}
-            />
+            <Thumbnail key={movie.id} movie={movie} />
           ))}
         </div>
         <ChevronRightIcon

@@ -65,7 +65,7 @@ function login() {
             <input
               {...register("email", { required: true })}
               type='email'
-              placeholder='Email...'
+              placeholder='email...'
               className='input'
             />
             {errors.email && (
@@ -78,7 +78,7 @@ function login() {
             <input
               {...register("password", { required: true })}
               type='password'
-              placeholder='Password...'
+              placeholder='password...'
               className='input'
             />
             {errors.password && (

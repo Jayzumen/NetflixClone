@@ -1,11 +1,12 @@
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
-import { modalState } from "../atoms/modalAtom";
+import { modalState, movieState } from "../atoms/modalAtom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
 import Row from "../components/Row";
+import useList from "../hooks/useList";
 import { Movie } from "../typings";
 import requests from "../utils/requests";
 import useAuth from "./../hooks/useAuth";
@@ -31,8 +32,10 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-  const { loading } = useAuth();
+  const { user, loading } = useAuth();
   const showModal = useRecoilValue(modalState);
+  const movie = useRecoilValue(movieState);
+  const list = useList(user?.uid);
 
   if (loading) return null;
 
@@ -42,7 +45,9 @@ const Home = ({
         showModal && "!h-screen overflow-hidden"
       }`}>
       <Head>
-        <title>Home - Netflix</title>
+        <title>
+          {movie?.title || movie?.original_name || "Home"} - Netflix
+        </title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
@@ -56,7 +61,7 @@ const Home = ({
           <Row title='Top Rated' movies={topRated} />
           <Row title='Action Thrillers' movies={actionMovies} />
           {/* My List */}
-          {/* {list.length > 0 && <Row title='My List' movies={list} />} */}
+          {list.length > 0 && <Row title='My List' movies={list} />}
 
           <Row title='Comedies' movies={comedyMovies} />
           <Row title='Horror Movies' movies={horrorMovies} />

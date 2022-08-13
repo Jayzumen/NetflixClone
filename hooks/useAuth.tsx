@@ -14,7 +14,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 
 interface IAuth {
   user: User | null;

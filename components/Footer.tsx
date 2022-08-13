@@ -105,7 +105,7 @@ const Footer = () => {
       </div>
       <div>
         <p className='text-gray-400 mt-4'>
-          <small>© 2022, made by Jan-Niklas Reinhardt </small>
+          <small>© 2022, made by JN Reinhardt </small>
           || API from
           <a
             href='https://www.themoviedb.org/'

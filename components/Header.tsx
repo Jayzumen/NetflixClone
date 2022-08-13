@@ -1,6 +1,7 @@
 import { BellIcon, SearchIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useAuth from "./../hooks/useAuth";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +44,7 @@ function Header() {
       </div>
 
       {/* right section */}
-      <div className='flex items-center space-x-4 text-sm font-light'>
+      <div className='flex items-center space-x-6 text-sm font-medium'>
         <SearchIcon className='hidden sm:inline h-6 w-6 cursor-pointer' />
         <p className='hidden lg:inline'>Kids</p>
         <BellIcon className='h-6 w-6 cursor-pointer' />

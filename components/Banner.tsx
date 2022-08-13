@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { Movie } from "../typing";
+import { Movie } from "../typings";
 import { useEffect, useState } from "react";
 import { baseUrl } from "../constants/movie";
 import { FaPlay } from "react-icons/fa";
 import { InformationCircleIcon } from "@heroicons/react/solid";
+import { modalState, movieState } from "../atoms/modalAtom";
+import { useRecoilState } from "recoil";
 
 interface Props {
   netflixOriginals: Movie[];
@@ -11,6 +13,8 @@ interface Props {
 
 function Banner({ netflixOriginals }: Props) {
   const [movie, setMovie] = useState<Movie | null>(null);
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 
   useEffect(() => {
     setMovie(
@@ -32,12 +36,12 @@ function Banner({ netflixOriginals }: Props) {
         />
       </div>
 
-      <div className='pt-24 lg:pt-52 xl:pt-60'>
+      <div className='pt-32 md:pt-36 lg:pt-52 xl:pt-68'>
         <div className='md:min-h-[250px] pt-12 md:pt-20 lg:pt-16'>
           <h1 className='text-2xl lg:text-7xl md:text-4xl font-bold pb-2'>
             {movie?.title || movie?.name || movie?.original_name}
           </h1>
-          <p className='hidden md:flex max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl pb-2'>
+          <p className='hidden md:flex md:min-h-[100px] lg:min-h-[200px] max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl pb-2'>
             {movie?.overview}
           </p>
         </div>
@@ -47,7 +51,12 @@ function Banner({ netflixOriginals }: Props) {
             <FaPlay className='h-4 w-4 text-black md:h-7 md:w-7' />{" "}
             Play
           </button>
-          <button className='bannerButton bg-[gray]/70'>
+          <button
+            className='bannerButton bg-[gray]/70'
+            onClick={() => {
+              setCurrentMovie(movie);
+              setShowModal(true);
+            }}>
             <InformationCircleIcon className='h-5 w-5 md:h-8 md:w-8' />
             More Info
           </button>

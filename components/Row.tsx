@@ -3,7 +3,7 @@ import {
   ChevronRightIcon,
 } from "@heroicons/react/outline";
 import { useRef, useState } from "react";
-import { Movie } from "../typing";
+import { Movie } from "../typings";
 import Thumbnail from "./Thumbnail";
 
 interface Props {
@@ -51,7 +51,10 @@ function Row({ title, movies }: Props) {
           className='flex items-center space-x-0.5 overflow-x-scroll md:space-x-2.5
            md:p-2 scrollbar-hide '>
           {movies.map((movie) => (
-            <Thumbnail key={movie.title} movie={movie} />
+            <Thumbnail
+              key={movie.title || movie.name}
+              movie={movie}
+            />
           ))}
         </div>
         <ChevronRightIcon

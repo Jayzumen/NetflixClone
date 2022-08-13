@@ -95,6 +95,9 @@ function login() {
           className='w-full rounded bg-[#e50914] py-3 font-semibold'>
           Sign In
         </button>
+        <p className='text-gray-300 text-sm'>
+          To proceed just enter a random email and password
+        </p>
 
         <div className='text-[gray]'>
           New to Netflix?{" "}

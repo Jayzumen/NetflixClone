@@ -34,6 +34,7 @@ function Banner({ netflixOriginals }: Props) {
           layout='fill'
           objectFit='cover'
           priority={true}
+          alt={movie?.name || movie?.title || movie?.original_name}
         />
       </div>
 

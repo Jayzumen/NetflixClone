@@ -1,4 +1,5 @@
 import { BellIcon, SearchIcon } from "@heroicons/react/solid";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import AccountMenu from "./AccountMenu";
 import BasicMenu from "./BasicMenu";
@@ -26,11 +27,12 @@ function Header() {
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       {/* Left section */}
       <div className='flex items-center space-x-2 md:space-x-10'>
-        <img
-          src='https://rb.gy/ulxxee'
+        <Image
+          // src='https://rb.gy/ulxxee'
+          src='https://i.ibb.co/r5krrdz/logo.png'
           alt='Netflix Logo'
-          width={100}
-          height={100}
+          width={120}
+          height={50}
           className='cursor-pointer object-contain'
         />
 

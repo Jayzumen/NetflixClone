@@ -45,10 +45,10 @@ function Header() {
       </div>
 
       {/* right section */}
-      <div className='flex items-center space-x-6 text-sm font-medium'>
+      <div className='flex items-center space-x-4 text-sm font-medium'>
         <SearchIcon className='hidden sm:inline h-6 w-6 cursor-pointer' />
         <p className='hidden lg:inline'>Kids</p>
-        <BellIcon className='h-6 w-6 cursor-pointer' />
+        <BellIcon className='h-6 w-6 cursor-pointer hidden md:inline' />
 
         <AccountMenu />
       </div>

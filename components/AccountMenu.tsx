@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Image from "next/image";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 
@@ -20,7 +21,7 @@ function AccountMenu() {
   };
 
   return (
-    <div className=''>
+    <div>
       <Button
         id='account-button'
         aria-controls={open ? "account-menu" : undefined}
@@ -28,10 +29,12 @@ function AccountMenu() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         className='!capitalize !text-white'>
-        <img
+        <Image
           src='https://rb.gy/g1pwyx'
           alt='Account Logo'
           className='cursor-pointer rounded'
+          width={30}
+          height={30}
         />
       </Button>
       <Menu

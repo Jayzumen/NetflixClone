@@ -45,6 +45,10 @@ const Home = ({
         showModal && "!h-screen overflow-hidden"
       }`}>
       <Head>
+        <meta
+          name='description'
+          content='This is an Netflix-Clone Website'
+        />
         <title>
           {movie?.title || movie?.original_name || "Home"} -
           Netflix-Clone

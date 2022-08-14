@@ -36,6 +36,10 @@ function login() {
       className='relative flex h-screen w-screen flex-col bg-black
      md:items-center md:justify-center md:bg-transparent'>
       <Head>
+        <meta
+          name='description'
+          content='This is an Netflix-Clone Website'
+        />
         <title>Netflix-Clone</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>

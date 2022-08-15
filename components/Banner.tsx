@@ -24,6 +24,15 @@ function Banner({ netflixOriginals }: Props) {
     );
   }, [netflixOriginals]);
 
+  const truncateString = (str: string | undefined, num: number) => {
+    if (typeof str === "string")
+      if (str.length > num) {
+        return str.slice(0, num) + "...";
+      } else {
+        return str;
+      }
+  };
+
   return (
     <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[80%] lg:justify-end lg:pb-12'>
       <div className='absolute top-0 left-0 -z-10 h-[95vh] w-full'>
@@ -44,7 +53,7 @@ function Banner({ netflixOriginals }: Props) {
             {movie?.title || movie?.name || movie?.original_name}
           </h1>
           <p className='hidden md:flex md:min-h-[100px] lg:min-h-[200px] max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl pb-2'>
-            {movie?.overview}
+            {truncateString(movie?.overview, 250)}
           </p>
         </div>
 

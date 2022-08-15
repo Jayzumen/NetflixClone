@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Link from "next/link";
 import { useState } from "react";
 
 function BasicMenu() {
@@ -37,11 +38,15 @@ function BasicMenu() {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}>
-        <MenuItem onClick={handleClose}>Home</MenuItem>
+        <MenuItem>
+          <Link href='/'>Home</Link>
+        </MenuItem>
         <MenuItem onClick={handleClose}>TV Shows</MenuItem>
         <MenuItem onClick={handleClose}>Movies</MenuItem>
         <MenuItem onClick={handleClose}>New & Popular</MenuItem>
-        <MenuItem onClick={handleClose}>My List</MenuItem>
+        <MenuItem>
+          <Link href='/myList'>My List</Link>
+        </MenuItem>
       </Menu>
     </div>
   );

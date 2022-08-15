@@ -62,6 +62,7 @@ const Home = ({
         {/* Banner */}
         <Banner netflixOriginals={netflixOriginals} />
         <section className='md:space-y-24'>
+          <Row title='Netflix Originals' movies={netflixOriginals} />
           <Row title='Trending Now' movies={trendingNow} />
           <Row title='Top Rated' movies={topRated} />
           <Row title='Action Thrillers' movies={actionMovies} />

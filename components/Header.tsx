@@ -1,5 +1,6 @@
 import { BellIcon, SearchIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import AccountMenu from "./AccountMenu";
 import BasicMenu from "./BasicMenu";
@@ -28,21 +29,25 @@ function Header() {
       {/* Left section */}
       <div className='flex items-center space-x-2 md:space-x-10'>
         <Image
-          // src='https://rb.gy/ulxxee'
           src='https://i.ibb.co/r5krrdz/logo.png'
           alt='Netflix Logo'
           width={120}
           height={50}
+          priority
           className='cursor-pointer object-contain'
         />
 
         <BasicMenu />
         <ul className='hidden space-x-4 md:flex '>
-          <li className='headerLink'>Home</li>
+          <li className='headerLink'>
+            <Link href='/'>Home</Link>
+          </li>
           <li className='headerLink'>TV Shows</li>
           <li className='headerLink'>Movies</li>
           <li className='headerLink'>New & Popular</li>
-          <li className='headerLink'>My List</li>
+          <li className='headerLink'>
+            <Link href='/myList'>My List</Link>
+          </li>
         </ul>
       </div>
 

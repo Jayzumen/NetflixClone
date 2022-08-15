@@ -42,9 +42,7 @@ function Header() {
           <li className='headerLink'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='headerLink'>TV Shows</li>
-          <li className='headerLink'>Movies</li>
-          <li className='headerLink'>New & Popular</li>
+
           <li className='headerLink'>
             <Link href='/myList'>My List</Link>
           </li>
@@ -54,7 +52,6 @@ function Header() {
       {/* right section */}
       <div className='flex items-center space-x-4 text-sm font-medium'>
         <SearchIcon className='hidden sm:inline h-6 w-6 cursor-pointer' />
-        <p className='hidden lg:inline'>Kids</p>
         <BellIcon className='h-6 w-6 cursor-pointer hidden md:inline' />
 
         <AccountMenu />

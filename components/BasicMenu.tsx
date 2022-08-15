@@ -41,9 +41,9 @@ function BasicMenu() {
         <MenuItem>
           <Link href='/'>Home</Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>TV Shows</MenuItem>
+        {/* <MenuItem onClick={handleClose}>TV Shows</MenuItem>
         <MenuItem onClick={handleClose}>Movies</MenuItem>
-        <MenuItem onClick={handleClose}>New & Popular</MenuItem>
+        <MenuItem onClick={handleClose}>New & Popular</MenuItem> */}
         <MenuItem>
           <Link href='/myList'>My List</Link>
         </MenuItem>

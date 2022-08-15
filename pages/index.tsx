@@ -50,10 +50,9 @@ const Home = ({
           content='This is an Netflix-Clone Website'
         />
         <title>
-          {movie?.title || movie?.original_name || "Home"} -
-          Netflix-Clone
+          {movie?.title || movie?.original_name || "Home"}
         </title>
-        <link rel='icon' href='/favicon.ico' />
+        {/* <link rel='icon' href='/favicon.ico' /> */}
       </Head>
 
       {/* Header */}

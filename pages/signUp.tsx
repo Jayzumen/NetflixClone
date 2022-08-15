@@ -36,12 +36,9 @@ function signUp() {
       className='relative flex h-screen w-screen flex-col bg-black
      md:items-center md:justify-center md:bg-transparent'>
       <Head>
-        <meta
-          name='description'
-          content='This is an Netflix-Clone Website'
-        />
-        <title>Netflix-Clone</title>
-        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='This is an sign up page' />
+        <title>SignUp</title>
+        {/* <link rel='icon' href='/favicon.ico' /> */}
       </Head>
 
       <Image

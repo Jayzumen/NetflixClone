@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 
@@ -47,7 +48,9 @@ function AccountMenu() {
           "aria-labelledby": "basic-button",
         }}>
         <div>
-          <MenuItem onClick={handleClose}>Account</MenuItem>
+          <MenuItem onClick={handleClose}>
+            <Link href='/myList'>Account</Link>
+          </MenuItem>
           <MenuItem onClick={handleClose}>Help Center</MenuItem>
         </div>
 

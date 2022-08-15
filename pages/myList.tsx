@@ -20,12 +20,9 @@ function myList() {
         showModal && "!h-screen overflow-hidden"
       }`}>
       <Head>
-        <meta
-          name='description'
-          content='This is an Netflix-Clone Website'
-        />
-        <title>My List - Netflix-Clone</title>
-        <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='This is the my List page' />
+        <title>My List</title>
+        {/* <link rel='icon' href='/favicon.ico' /> */}
       </Head>
 
       <Header />

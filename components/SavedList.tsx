@@ -15,7 +15,7 @@ function SavedList({ movies }: Props) {
         text-2xl lg:text-4xl pb-6'>
         My saved Movies
       </h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
         {movies.map((movie) => (
           <SavedMovie key={movie.id} movie={movie} />
         ))}

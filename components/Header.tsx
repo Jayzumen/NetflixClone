@@ -28,14 +28,16 @@ function Header() {
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       {/* Left section */}
       <div className='flex items-center space-x-2 md:space-x-10'>
-        <Image
-          src='https://i.ibb.co/r5krrdz/logo.png'
-          alt='Netflix Logo'
-          width={120}
-          height={50}
-          priority
-          className='cursor-pointer object-contain'
-        />
+        <Link href='/'>
+          <Image
+            src='https://i.ibb.co/r5krrdz/logo.png'
+            alt='Netflix Logo'
+            width={120}
+            height={50}
+            priority
+            className='cursor-pointer object-contain'
+          />
+        </Link>
 
         <BasicMenu />
         <ul className='hidden space-x-4 md:flex '>
